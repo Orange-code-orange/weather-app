@@ -186,8 +186,33 @@
 	.card__dat2 {
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	.card__title__temperature {
+		grid-column: 1 / 4;
+		grid-row: 2 / 3;
+	}
+
+	.card__title_icon {
+		position: absolute;
+	}
+
+	.card__settings {
+		grid-column: 1 / 4;
+		grid-row: 5 / 6;
+	}
+	.card__dat {
+		grid-row: 3 / 4;
+	}
+	.card__dat2 {
+		grid-row: 4 / 5;
+	}
 	.box {
 		padding: 1.5em;
+	}
+
+	.card__title {
+		grid-column: 1 / 4;
+		grid-row: 4 / 1;
 	}
 	.info-val {
 		font-size: 2.5em;
@@ -196,77 +221,10 @@
 		font-size: 1.2em;
 	}
 	.card {
-		width: 90vw;
+		width: 80vw;
 		height: auto;
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(2, 1fr);
+		grid-template-rows: repeat(4, 1fr);
 		gap: 20px;
-	}
-}
-
-@media (max-width: 768px) {
-	.card__dat,
-	.card__dat2 {
-		grid-template-columns: 1fr;
-	}
-	.box {
-		padding: 1em;
-	}
-	.info-val {
-		font-size: 2em;
-	}
-	.unit {
-		font-size: 1em;
-	}
-	.card {
-		width: 100vw;
-		height: auto;
-		grid-template-columns: 1fr;
-		grid-template-rows: auto;
-		gap: 10px;
-	}
-	.card__title {
-		grid-template-columns: 1fr;
-		grid-template-rows: auto;
-		grid-column: 1 / -1;
-	}
-	.title__country--and--search {
-		padding-left: 15px;
-		width: auto;
-	}
-}
-
-@media (max-width: 480px) {
-	.box {
-		padding: 0.5em;
-	}
-	.info-val {
-		font-size: 1.5em;
-	}
-	.unit {
-		font-size: 0.9em;
-	}
-	.card__title__city-country {
-		font-size: 1.8em;
-	}
-	.title__country--and--search {
-		padding-left: 10px;
-	}
-	.card {
-		width: 100vw; /* Fixed width */
-		height: 30vh;
-	}
-}
-
-/* Añadir un punto de quiebre para pantallas muy pequeñas */
-@media (max-width: 320px) {
-	.box {
-		padding: 0.25em;
-	}
-	.info-val {
-		font-size: 1.2em;
-	}
-	.unit {
-		font-size: 0.8em;
 	}
 }
